@@ -1,16 +1,33 @@
-# React + Vite
+# Personal portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A dark, responsive portfolio built with React, Vite, and Tailwind CSS. Personal details and examples are marked as placeholders so you can replace them with confirmed information.
 
-Currently, two official plugins are available:
+## Run locally
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```sh
+npm install
+npm run dev
+```
 
-## React Compiler
+Vite prints a local URL where you can preview the site. To create a static production build, run `npm run build`; the output is written to `dist/`.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Personalize the content
 
-## Expanding the Oxlint configuration
+Start with `src/data/portfolio.js`:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+- Replace `[Your Name]` and the contact placeholders.
+- Update the project names, descriptions, technology lists, and optional links.
+- Replace skill prompts only with skills you can confirm.
+- Add real activities and achievements, or remove unused placeholder entries.
+- Add a project image path when you have a screenshot.
+
+The page sections are assembled in `src/App.jsx`. Reusable section layouts and project cards live in `src/components/PortfolioSections.jsx`; the shared icon components are in `src/components/Icons.jsx`.
+
+## Deployment
+
+The Vite build uses relative asset paths, which supports deployment beneath a GitHub Pages project URL as well as root hosting. Deploy the contents of `dist/` using your chosen static host.
+
+## Checks
+
+- `npm run build` — production build
+- `npm run lint` — Oxlint
