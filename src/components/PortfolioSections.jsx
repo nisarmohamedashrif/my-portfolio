@@ -196,16 +196,9 @@ export function SkillsSection() {
 function ActivityCard({ activity }) {
   return (
     <article className="rounded-xl border border-white/[0.09] bg-[#0e1118] p-6">
-      <div className="flex items-start justify-between gap-3">
-        <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-cyan-200/70">
-          Suggested area · {activity.area}
-        </p>
-        {activity.isPlaceholder && (
-          <span className="shrink-0 rounded-full border border-white/10 px-2 py-1 font-mono text-[9px] uppercase tracking-wider text-slate-500">
-            Placeholder
-          </span>
-        )}
-      </div>
+      <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-cyan-200/70">
+        {activity.area}
+      </p>
       <h3 className="mt-5 text-base font-medium text-white">{activity.title}</h3>
       <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2 font-mono text-[11px] text-slate-500">
         <p>
@@ -226,19 +219,28 @@ export function ActivitiesSection() {
   return (
     <Section aria-labelledby="activities-title" className="bg-white/[0.012]" id="activities">
       <SectionHeading
-        description="These prompts are placeholders, not claims. Replace them with genuine experiences, your role, dates, and contributions."
+        description="A growing collection of hands-on learning, community involvement, and practical experiences."
         eyebrow="Beyond the classroom"
         id="activities-title"
         title="Activities & experience."
       />
-      <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-        {portfolio.activities.map((activity, index) => (
-          <ActivityCard
-            activity={activity}
-            key={`${activity.area}-${index}`}
-          />
-        ))}
-      </div>
+      {portfolio.activities.length > 0 ? (
+        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+          {portfolio.activities.map((activity, index) => (
+            <ActivityCard
+              activity={activity}
+              key={`${activity.area}-${index}`}
+            />
+          ))}
+        </div>
+      ) : (
+        <div className="rounded-xl border border-white/[0.09] bg-[#0e1118] px-6 py-10 text-center">
+          <p className="text-base font-medium text-slate-200">Experience coming soon</p>
+          <p className="mt-2 text-sm leading-6 text-slate-500">
+            This section will be updated with verified activities, projects, and contributions.
+          </p>
+        </div>
+      )}
     </Section>
   )
 }

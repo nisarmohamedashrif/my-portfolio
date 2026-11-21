@@ -67,30 +67,5 @@ export const portfolio = {
       ],
     },
   ],
-  activities: [
-    {
-      area: 'University / computing club',
-      title: '[Activity title]',
-      role: '[Your role]',
-      dates: '[Dates]',
-      detail: 'Add a short description of an activity you actually participated in.',
-      isPlaceholder: true,
-    },
-    {
-      area: 'Hackathon / group project',
-      title: '[Activity title]',
-      role: '[Your role]',
-      dates: '[Dates]',
-      detail: 'Describe the project, your role, and what you contributed.',
-      isPlaceholder: true,
-    },
-    {
-      area: 'Workshop / volunteering',
-      title: '[Activity title]',
-      role: '[Your role]',
-      dates: '[Dates]',
-      detail: 'Add a brief description of a workshop or volunteering activity.',
-      isPlaceholder: true,
-    },
-  ],
+  activities: [],
 }
