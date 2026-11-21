@@ -1,5 +1,8 @@
+import smartLibraryImage from '../assets/images/smart-library.png'
+import boardMateImage from '../assets/images/board-mate.png'
+
 export const portfolio = {
-  name: '[Your Name]',
+  name: 'Mohamed Ashrif',
   hero: {
     name: 'Ashrif',
     headline: 'IT Undergraduate | Aspiring Developer | Tech Enthusiast',
@@ -17,7 +20,7 @@ export const portfolio = {
       technologies: ['ESP32', 'Arduino IDE', 'RFID', 'FSR sensors', 'LCD'],
       githubUrl: '',
       demoUrl: '',
-      image: '',
+      image: smartLibraryImage,
       status: 'Status to confirm',
     },
     {
@@ -27,7 +30,7 @@ export const portfolio = {
       technologies: ['React', 'Tailwind CSS', 'Firebase'],
       githubUrl: '',
       demoUrl: '',
-      image: '',
+      image: boardMateImage,
       status: 'In Progress',
     },
   ],
@@ -53,13 +56,6 @@ export const portfolio = {
         { name: 'VS Code', status: 'Currently use' },
         { name: 'Git', status: 'Currently use' },
         { name: 'GitHub', status: 'Currently use' },
-      ],
-    },
-    {
-      category: 'Hardware & IoT',
-      items: [
-        { name: 'ESP32', status: 'Currently use' },
-        { name: 'Arduino IDE', status: 'Currently use' },
       ],
     },
     {

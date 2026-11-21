@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { portfolio } from './data/portfolio.js'
+import profileImage from './assets/images/profile.jpg'
 import {
   AboutSection,
   ActivitiesSection,
@@ -129,6 +130,13 @@ function HeroSection() {
         </div>
 
         <div className="hero-enter hero-enter-delayed relative mx-auto w-full max-w-md">
+          <div className="mb-4 overflow-hidden rounded-2xl border border-white/10 bg-white shadow-2xl shadow-black/20">
+            <img
+              alt={`${portfolio.hero.name} profile`}
+              className="aspect-[4/3] w-full object-cover object-[center_30%]"
+              src={profileImage}
+            />
+          </div>
           <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-[#10141b]/90 p-6 shadow-2xl shadow-black/20 sm:p-8">
             <div className="flex items-center justify-between border-b border-white/[0.08] pb-5">
               <span className="font-mono text-xs text-slate-500">A LITTLE ABOUT MY DIRECTION</span>
