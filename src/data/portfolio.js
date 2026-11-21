@@ -93,24 +93,4 @@ export const portfolio = {
       isPlaceholder: true,
     },
   ],
-  achievements: [
-    {
-      category: 'Certificate or course',
-      title: '[Certificate title]',
-      issuer: '[Issuing organization]',
-      date: '[Date]',
-      image: '',
-      verificationUrl: '',
-      isPlaceholder: true,
-    },
-    {
-      category: 'Award or academic achievement',
-      title: '[Achievement title]',
-      issuer: '[Issuing organization]',
-      date: '[Date]',
-      image: '',
-      verificationUrl: '',
-      isPlaceholder: true,
-    },
-  ],
 }

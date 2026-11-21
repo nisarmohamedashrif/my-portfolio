@@ -4,7 +4,6 @@ import profileImage from './assets/images/profile.jpg'
 import {
   AboutSection,
   ActivitiesSection,
-  AchievementsSection,
   ContactSection,
   Footer,
   ProjectsSection,
@@ -19,7 +18,6 @@ const navigation = [
   ['Projects', 'projects'],
   ['Skills', 'skills'],
   ['Activities', 'activities'],
-  ['Achievements', 'achievements'],
   ['Contact', 'contact'],
 ]
 
@@ -188,7 +186,6 @@ function App() {
         <ProjectsSection />
         <SkillsSection />
         <ActivitiesSection />
-        <AchievementsSection />
         <ContactSection />
       </main>
       <Footer />

@@ -38,7 +38,7 @@ function Section({ children, className = '', ...props }) {
 export function AboutSection() {
   return (
     <Section aria-labelledby="about-title" id="about">
-      <SectionHeading eyebrow="01 / About" id="about-title" title="A little about me." />
+      <SectionHeading eyebrow="About" id="about-title" title="A little about me." />
       <div className="grid gap-10 md:grid-cols-[0.8fr_1.2fr] md:gap-20">
         <p className="font-mono text-sm leading-7 text-slate-500">
           IT undergraduate
@@ -136,7 +136,7 @@ export function ProjectsSection() {
     <Section aria-labelledby="projects-title" className="bg-white/[0.012]" id="projects">
       <SectionHeading
         description="Project summaries, technologies, and current status. Repository, demo, and image details will appear when available."
-        eyebrow="02 / Selected work"
+        eyebrow="Selected work"
         id="projects-title"
         title="My projects."
       />
@@ -154,7 +154,7 @@ export function SkillsSection() {
     <Section aria-labelledby="skills-title" id="skills">
       <SectionHeading
         description="A snapshot of what I currently use, what I’m learning, and areas I’m interested in exploring."
-        eyebrow="03 / Toolkit"
+        eyebrow="Toolkit"
         id="skills-title"
         title="Skills & learning."
       />
@@ -227,7 +227,7 @@ export function ActivitiesSection() {
     <Section aria-labelledby="activities-title" className="bg-white/[0.012]" id="activities">
       <SectionHeading
         description="These prompts are placeholders, not claims. Replace them with genuine experiences, your role, dates, and contributions."
-        eyebrow="04 / Beyond the classroom"
+        eyebrow="Beyond the classroom"
         id="activities-title"
         title="Activities & experience."
       />
@@ -236,96 +236,6 @@ export function ActivitiesSection() {
           <ActivityCard
             activity={activity}
             key={`${activity.area}-${index}`}
-          />
-        ))}
-      </div>
-    </Section>
-  )
-}
-
-function AchievementCard({ achievement, index }) {
-  return (
-    <article className="overflow-hidden rounded-xl border border-white/[0.09] bg-[#0e1118]">
-      <div className="flex aspect-[16/10] items-center justify-center border-b border-white/[0.08] bg-gradient-to-br from-[#121821] to-[#0c0f15]">
-        {achievement.image ? (
-          <img
-            alt={`${achievement.title} certificate or award`}
-            className="h-full w-full object-cover"
-            src={achievement.image}
-          />
-        ) : (
-          <div className="text-center">
-            <span className="font-mono text-5xl tracking-[-0.08em] text-white/10">
-              0{index + 1}
-            </span>
-            <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.2em] text-slate-600">
-              Image placeholder
-            </p>
-          </div>
-        )}
-      </div>
-      <div className="p-6">
-        <div className="flex flex-wrap items-start justify-between gap-3">
-          <div>
-            <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-cyan-200/70">
-              {achievement.category}
-            </p>
-            <h3 className="mt-2 text-base font-medium text-white">{achievement.title}</h3>
-          </div>
-          {achievement.isPlaceholder && (
-            <span className="shrink-0 rounded-full border border-white/10 px-2.5 py-1 font-mono text-[9px] uppercase tracking-wider text-slate-500">
-              Placeholder
-            </span>
-          )}
-        </div>
-        <div className="mt-5 grid gap-4 border-t border-white/[0.08] pt-4 sm:grid-cols-2">
-          <div>
-            <p className="font-mono text-[10px] uppercase tracking-[0.15em] text-slate-600">
-              Issuing organization
-            </p>
-            <p className="mt-1 text-sm text-slate-400">{achievement.issuer}</p>
-          </div>
-          <div>
-            <p className="font-mono text-[10px] uppercase tracking-[0.15em] text-slate-600">
-              Date
-            </p>
-            <p className="mt-1 text-sm text-slate-400">{achievement.date}</p>
-          </div>
-        </div>
-        <div className="mt-5 border-t border-white/[0.08] pt-4">
-          {achievement.verificationUrl ? (
-            <a
-              className="inline-flex items-center gap-1.5 text-xs text-cyan-100 transition hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300"
-              href={achievement.verificationUrl}
-              rel="noreferrer"
-              target="_blank"
-            >
-              Verify credential <ArrowUpRight />
-            </a>
-          ) : (
-            <span className="text-xs text-slate-600">Verification link not added</span>
-          )}
-        </div>
-      </div>
-    </article>
-  )
-}
-
-export function AchievementsSection() {
-  return (
-    <Section aria-labelledby="achievements-title" id="achievements">
-      <SectionHeading
-        description="Add genuine certificates and achievements here. The cards below are placeholders for details you can provide later."
-        eyebrow="05 / Milestones"
-        id="achievements-title"
-        title="Achievements & certificates."
-      />
-      <div className="grid gap-4 md:grid-cols-2">
-        {portfolio.achievements.map((achievement, index) => (
-          <AchievementCard
-            achievement={achievement}
-            index={index}
-            key={`${achievement.title}-${index}`}
           />
         ))}
       </div>
@@ -362,7 +272,7 @@ export function ContactSection() {
         <div>
           <SectionHeading
             description="Have a question or an opportunity to share? Reach out by email or connect with me online."
-            eyebrow="06 / Contact"
+            eyebrow="Contact"
             id="contact-title"
             title="Let’s start a conversation."
           />
