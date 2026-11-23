@@ -313,35 +313,10 @@ export function ContactSection() {
 }
 
 export function Footer() {
-  const socialProfiles = [
-    ['GitHub', portfolio.github],
-    ['LinkedIn', portfolio.linkedin],
-  ]
-
   return (
     <footer className="border-t border-white/[0.07] px-5 py-6 sm:px-8 lg:px-12">
       <div className="mx-auto flex max-w-7xl flex-col gap-5 text-xs text-slate-600 sm:flex-row sm:items-center sm:justify-between">
-        <p>© {new Date().getFullYear()} {portfolio.name}. Built with care.</p>
-        <div className="flex flex-wrap items-center gap-x-5 gap-y-3">
-          {socialProfiles.map(([label, url]) => (
-            url.startsWith('https://') ? (
-              <a
-                className="transition hover:text-slate-300"
-                href={url}
-                key={label}
-                rel="noreferrer"
-                target="_blank"
-              >
-                {label}
-              </a>
-            ) : (
-              <span key={label}>{label} · add profile URL</span>
-            )
-          ))}
-          <a className="inline-flex items-center gap-1.5 transition hover:text-slate-300" href="#home">
-            Back to top <ArrowUpRight />
-          </a>
-        </div>
+        <p>© 2026 {portfolio.name}. Built with care.</p>
       </div>
     </footer>
   )
