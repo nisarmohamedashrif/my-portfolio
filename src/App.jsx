@@ -25,10 +25,10 @@ function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/[0.07] bg-[#090b10]/90 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 px-3 pt-3 sm:px-6">
       <nav
         aria-label="Main navigation"
-        className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8 lg:px-12"
+        className="relative mx-auto flex max-w-7xl items-center justify-between rounded-2xl border border-white/[0.07] bg-[#090b10]/75 px-4 py-3 shadow-lg shadow-black/10 backdrop-blur-xl sm:px-6"
       >
         <a
           className="font-mono text-sm font-semibold tracking-tight text-white"
@@ -51,7 +51,7 @@ function Navigation() {
         </button>
 
         <div
-          className={`${menuOpen ? 'flex' : 'hidden'} absolute left-0 right-0 top-full flex-col gap-1 border-b border-white/10 bg-[#090b10] px-5 py-4 md:static md:flex md:flex-row md:items-center md:gap-7 md:border-0 md:bg-transparent md:p-0`}
+          className={`${menuOpen ? 'flex' : 'hidden'} absolute left-0 right-0 top-[calc(100%+0.5rem)] flex-col gap-1 rounded-2xl border border-white/[0.07] bg-[#090b10]/95 px-4 py-3 shadow-xl shadow-black/20 backdrop-blur-xl md:static md:flex md:flex-row md:items-center md:gap-7 md:rounded-none md:border-0 md:bg-transparent md:p-0 md:shadow-none md:backdrop-blur-none`}
           id="primary-navigation"
         >
           {navigation.map(([label, target]) => (
