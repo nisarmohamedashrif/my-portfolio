@@ -1,4 +1,3 @@
-import profileImage from '../assets/images/profile.jpg'
 import { portfolio } from '../data/portfolio.js'
 import { GithubIcon, LinkedInIcon, MailIcon } from './Icons.jsx'
 
@@ -13,7 +12,7 @@ export default function Hero() {
 
   return (
     <section aria-labelledby="hero-title" className="bg-white" id="home">
-      <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 py-14 sm:px-8 md:py-20 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16 lg:py-24">
+      <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8 md:py-20 lg:py-24">
         <div>
           <h1
             className="rise text-balance text-4xl font-extrabold leading-[1.05] tracking-tight text-ink sm:text-6xl lg:text-7xl"
@@ -73,17 +72,6 @@ export default function Hero() {
           </dl>
         </div>
 
-        <div className="rise mx-auto w-full max-w-sm lg:max-w-none" style={{ '--d': '200ms' }}>
-          <div className="relative aspect-[4/5] overflow-hidden rounded-3xl bg-tint">
-            {/* multiply blends the photo's white backdrop into the tinted panel */}
-            <img
-              alt={`Portrait of ${name}`}
-              className="absolute bottom-[-22%] left-1/2 w-[135%] max-w-none -translate-x-[44%] mix-blend-multiply"
-              fetchPriority="high"
-              src={profileImage}
-            />
-          </div>
-        </div>
       </div>
     </section>
   )

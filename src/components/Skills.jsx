@@ -7,7 +7,7 @@ export default function Skills() {
       <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
         <div className="lg:col-span-4">
           <SectionHeading
-            description="Technologies I work with, and the areas I’m exploring next."
+            description="Technologies I've learned, tools I'm using, and skills I'm developing."
             id="skills-title"
             title="Skills and tools"
           />

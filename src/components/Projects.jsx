@@ -44,6 +44,11 @@ function ProjectDetails({ project }) {
             {project.status}
           </span>
         )}
+        {project.role && (
+          <span className="rounded-full border border-line bg-mist px-3 py-1 text-xs font-semibold text-ink">
+            {project.role}
+          </span>
+        )}
         <span className="text-sm font-medium text-muted">{project.type}</span>
       </div>
 
