@@ -1,41 +1,57 @@
 @import "tailwindcss";
 
-:root {
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-optical-sizing: auto;
-  scroll-behavior: smooth;
-  background: #090b10;
-  color: #cbd5e1;
+@theme {
+  --font-sans: "Plus Jakarta Sans Variable", ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", sans-serif;
+
+  --color-mist: #f3f5f9;
+  --color-tint: #e5ebf7;
+  --color-ink: #0e1a33;
+  --color-body: #46536a;
+  --color-muted: #5f6b80;
+  --color-line: #dce2ed;
+  --color-brand: #1f4fd8;
+  --color-brand-dark: #1840b4;
 }
 
-* {
-  box-sizing: border-box;
+html {
+  scroll-behavior: smooth;
+  /* keeps section headings clear of the sticky navigation bar */
+  scroll-padding-top: 4.5rem;
 }
 
 body {
   min-width: 320px;
-  min-height: 100vh;
   margin: 0;
+  background: #fff;
+  color: var(--color-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 ::selection {
-  background: rgb(165 243 252 / 25%);
-  color: #f8fafc;
+  background: rgb(31 79 216 / 20%);
+  color: var(--color-ink);
 }
 
 :focus-visible {
-  outline-color: #a5f3fc;
+  outline: 2px solid var(--color-brand);
+  outline-offset: 3px;
+}
+
+.on-dark :focus-visible {
+  outline-color: #fff;
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
   *,
   *::before,
   *::after {
-    scroll-behavior: auto !important;
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
